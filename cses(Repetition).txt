@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int maxlength(string input){
+    int n=input.size();
+    int count=1,ans=1;
+    for(int i=1;i<n;i++){
+        if(input[i-1]==input[i]){
+            count++;
+        }else{
+        count=1;
+}        ans=max(count,ans);
+    }return ans;
+}
+int main(){
+    string input;
+    cin>>input;
+    cout<< maxlength(input);
+}
